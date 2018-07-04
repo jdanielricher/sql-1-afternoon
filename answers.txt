@@ -53,11 +53,6 @@ values
 /* List all the people in the Person table where their favorite color is yellow or purple (use IN). */
 /* select * from person where favoritecolor in ('yellow', 'purple'); */
 
-
-
-
-
-
 /* Create a table called Orders that records: PersonID, ProductName, ProductPrice, Quantity. */
 /* create table orders (
 	personID,
@@ -89,11 +84,6 @@ values
 /* Calculate the total order price by a single PersonID. */
 /* select sum(quantity * productprice) from orders where personid = 2; */
 
-
-
-
-
-
 /* Add 3 new Artists to the Artist table. */
 /* insert into artist(name)
 values
@@ -112,11 +102,6 @@ select * from artist order by name desc limit 10; */
 
 /* Select all artists that contain the word "Black". */
 /* select * from artist where name like "%black%"; */
-
-
-
-
-
 
 /* List all Employee first and last names only that live in Calgary. */
 /* select firstname, lastname from employee where city = 'Calgary'; */
@@ -137,10 +122,6 @@ limit 1; */
 
 /* Count how many people live in Lethbridge. */
 /* select count(*) from employee where city = 'Lethbridge'; */
-
-
-
-
 
 
 /* Count how many orders were made from the USA. */
