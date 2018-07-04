@@ -1,0 +1,168 @@
+/* Create a table called Person that records a person's ID, Name, Age, Height ( in cm ), City, FavoriteColor. */
+/* create table person (
+	id integer primary key autoincrement,
+  	name varchar(80),
+  	age integer,
+  	height integer,
+  	city varchar(80),
+  	favoritecolor varchar(80)
+); */
+
+/* Add 5 different people into the Person database. */
+/* insert into person(name, age, height, city, favoritecolor) 
+values
+	('Reggie', 25, 167, 'Woonsocket', 'purple'),
+    ('Darfa', 20, 170, 'Paris', 'red'),
+  	('Monet, 19, 158, 'Vancouver', 'green'),
+  	('Drake', 20, 180, 'Greene', 'orange'),
+  	('George', 24, 166, 'Dallas', 'black'); */
+    
+/* List all the people in the Person table by Height from tallest to shortest */
+/* select * from person order by height desc; */
+
+/*List all the people in the Person table by Height from shortest to tallest*/
+/* select * from person order by height; */
+
+/* List all the people in the Person table by Age from oldest to youngest */
+/* select * from person order by age desc; */
+
+/* List all the people in the Person table older than age 20 */
+/* select * from person where age > 20; */
+
+/* List all the people in the Person table that are exactly 18 */
+/* select * from person where age = 18; */
+
+/* List all the people in the Person table that are less than 20 and older than 30 */
+/* select * from person where age < 20 or age > 30; */
+
+/* List all the people in the Person table that are not 27 (Use not equals) */
+/* select * from person where age != 27; */
+
+/* List all the people in the Person table where their favorite color is not red. */
+/* select * from person where favoritecolor != 'red'; */
+
+/* List all the people in the Person table where their favorite color is not red and is not blue. */
+/* select * from person where favoritecolor != 'red' and favoritecolor != 'blue'; */
+
+/* List all the people in the Person table where their favorite color is orange or green. */
+/* select * from person where favoritecolor in ('orange', 'green'); */
+
+/* List all the people in the Person table where their favorite color is orange, green or blue (use IN). */
+/* select * from person where favoritecolor in ('orange', 'green', 'blue'); */
+
+/* List all the people in the Person table where their favorite color is yellow or purple (use IN). */
+/* select * from person where favoritecolor in ('yellow', 'purple'); */
+
+
+
+
+
+
+/* Create a table called Orders that records: PersonID, ProductName, ProductPrice, Quantity. */
+/* create table orders (
+	personID,
+  	productname varchar(80),
+  	productprice float,
+  	quantity integer
+); */
+
+/* Add 5 Orders to the Orders table.
+Make orders for at least two different people.
+PersonID should be different for different people. */
+/* insert into orders(personID, productname, productprice, quantity) 
+values
+	(2, 'shoes', 500, 1),
+    (2, 'guitar', 3000, 2
+    (1, 'pen', 2, 5),
+    (4, 'cream' , 50, 2),
+    (5, 'car', 30000, 3) */
+
+/* Select all the records from the Orders table. */
+/* select * from orders; */
+
+/* Calculate the total number of products rdered. */
+/* select sum(quantity) from orders; */
+
+/* Calculate the total order price. */
+/* select sum(quantity * productprice) from orders; */
+
+/* Calculate the total order price by a single PersonID. */
+/* select sum(quantity * productprice) from orders where personid = 2; */
+
+
+
+
+
+
+/* Add 3 new Artists to the Artist table. */
+/* insert into artist(name)
+values
+('something'),
+('another'),
+('last');
+ */
+/* Select 10 artists in reverse alphabetical order.
+select * from artist order by name desc limit 10; */
+
+/* Select 5 artists in alphabetical order. */
+/* select * from artist order by name limit 5; */
+
+/* Select all artists that start with the word "Black". */
+/* select * from artist where name like "Black%"; */
+
+/* Select all artists that contain the word "Black". */
+/* select * from artist where name like "%black%"; */
+
+
+
+
+
+
+/* List all Employee first and last names only that live in Calgary. */
+/* select firstname, lastname from employee where city = 'Calgary'; */
+
+/* Find the first and last name and birthdate for the youngest employee. */
+/* select firstname, lastname, birthdate from employee
+order by birthdate desc
+limit 1; */
+
+/* Find the first and last name and birthdate for the oldest employee. */
+/* select firstname, lastname, birthdate from employee
+order by birthdate
+limit 1; */
+
+/* Find everyone that reports to Nancy Edwards (Use the ReportsTo column). */
+/* You will need to query the employee table to find the Id for Nancy Edwards */
+/* select * from employee where reportsto = 2; */
+
+/* Count how many people live in Lethbridge. */
+/* select count(*) from employee where city = 'Lethbridge'; */
+
+
+
+
+
+
+/* Count how many orders were made from the USA. */
+/* select count(*) from invoice where billingcountry = 'USA'; */
+
+/* Find the largest order total amount. */
+/* select max(total) from invoice; */
+
+/* Find the smallest order total amount. */
+/* select min(total) from invoice; */
+
+/* Find all orders bigger than $5. */
+/* select * from invoice where total > 5; */
+
+/* Count how many orders were smaller than $5. */
+/* select count(*) from invoice where total < 5; */
+
+/* Count how many orders were in CA, TX, or AZ (use IN). */
+/* select count(*) from invoice where billingstate in ('CA', 'TX', 'AZ'); */
+
+/* Get the average total of the orders. */
+/* select avg(total) from invoice; */
+
+/* Get the total sum of the orders. */
+/* select sum(total) from invoice; */
